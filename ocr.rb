@@ -15,13 +15,15 @@ SCREEN_SIZE = [1280, 800]
 SCREEN_OFFSET = [70, 160] # from top left
 crop = [SCREEN_SIZE.join('x'), SCREEN_OFFSET.join('+')].join('+')
 
+size = ARGV.shift || 4
+
 loop do
   `screencapture screen.png`
   `convert screen.png -crop #{crop} crop.png`
 
-  board = Scanner.new("crop.png", 4)
+  board = Scanner.new("crop.png", size)
 
-  solver = SquareLogic.new(4) # hard-coded size
+  solver = SquareLogic.new(size)
   board.groups.each do |group|
     solver.send group[:op], group[:total], *group[:cells]
   end

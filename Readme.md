@@ -4,13 +4,13 @@ This program solves puzzles from [Everyday Genius: Square Logic](http://www.squa
 
 ### Usage
 
-`bundle exec ruby ocr.rb`
+`ruby ocr.rb`
 
 Application will grab a screenshot, crop it, process the image, and output a solution to the terminal.
 
 After a 5 second delay, it will repeat.
 
-### Caveats
+### Solving Caveats
 
 Does not solve "Straight" or "<,>" clues, Hidden-Cage, or Double Board puzzles.
 
