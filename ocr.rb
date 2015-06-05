@@ -32,7 +32,7 @@ loop do
   puts
   puts
 
-  sleep 2
+  sleep 5
 end
 
 # TODO: https://github.com/BlueM/cliclick for actually clicking the numbers
